@@ -3,58 +3,40 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./ecommerce-product-page-main/images/favicon-32x32.png">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="./css/main.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://pics.freeicons.io/uploads/icons/png/5929944911667544621-512.png">
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body class="font-KumbhSans">
-
-
-
-
-
   <!-- Navigation Bar  -->
   <nav>
     <!-- Container -->
-    <div class="container flex flex-row space-x-10 md:space-x-[6rem] justify-around md:mt-5  items-center p-3 mx-auto">
-
-      <div class="flex space-x-0 md:space-x-10 justify-between">
-
-        <!-- Hamburger Menu Icon -->
-        <div class=" justify-start p-3 space-x-11 mt-1 md:hidden">
+    <div class="container flex flex-row space-x-10 md:space-x-[6rem] justify-around md:mt-5 items-center p-3 mx-auto">
+    <div class="flex space-x-0 md:space-x-10 justify-between">
+      <!-- Hamburger Menu Icon -->
+      <div class="justify-start p-3 space-x-11 mt-1 md:hidden cursor-pointer" id="menuIcon">
           <img src="./Assets/images/icon-menu.svg" alt="">
-        </div>
-
-        <!-- Logo -->
-        <div class="justify-start p-3 space-x-10 ">
-          <img src="./Assets/images/logo.svg" class="h-5 w-25" alt="">
-        </div>
-        <!--Menu Items  -->
-        <div class=" hidden space-x-6 p-3 ml-14 md:block ">
-          <a href="#"
-            class=" text-DarkGrayishBlue   hover:text-Black hover:underline  hover:underline-offset-10 hover:decoration-Orange hover:decoration-4">Collections</a>
-          <a href="#"
-            class=" text-DarkGrayishBlue hover:text-Black hover:underline  hover:underline-offset-10 hover:decoration-Orange hover:decoration-4">Men</a>
-          <a href="#"
-            class="text-DarkGrayishBlue hover:text-Black hover:underline  hover:underline-offset-10 hover:decoration-Orange hover:decoration-4 ">Women</a>
-          <a href="#"
-            class="text-DarkGrayishBlue hover:text-Black hover:underline  hover:underline-offset-10 hover:decoration-Orange hover:decoration-4 ">About</a>
-          <a href="#"
-            class="text-DarkGrayishBlue hover:text-Black hover:underline  hover:underline-offset-10 hover:decoration-Orange hover:decoration-4 ">Contact</a>
-        </div>
       </div>
+      <!-- Logo -->
+      <div class="justify-start p-3 space-x-10" id="logo">
+          <img src="./Assets/images/logo.svg" class="h-5 w-25" alt="">
+      </div>
+      <!-- Menu Items  -->
+      <div class="hidden space-y-4 p-3 md:block flex flex-col" id="menu">
+        <a href="#" class="text-DarkGrayishBlue hover:text-Black hover:underline hover:decoration-Orange hover:decoration-4 px-4">Collections</a>
+        <a href="#" class="text-DarkGrayishBlue hover:text-Black hover:underline hover:decoration-Orange hover:decoration-4 px-4">Men</a>
+        <a href="#" class="text-DarkGrayishBlue hover:text-Black hover:underline hover:decoration-Orange hover:decoration-4 px-4">Women</a>
+        <a href="#" class="text-DarkGrayishBlue hover:text-Black hover:underline hover:decoration-Orange hover:decoration-4 px-4">About</a>
+        <a href="#" class="text-DarkGrayishBlue hover:text-Black hover:underline hover:decoration-Orange hover:decoration-4 px-4">Contact</a>
+    </div>
+    </div>
       <!-- Profile and Cart -->
-      <div class="flex space-x-4 md:space-x-5 mr-auto justify-end  ">
-
+      <div class="flex space-x-4 md:space-x-5 mr-auto justify-end" id="profile-cart">
         <div class=" flex p-3 hover:cursor-pointer ">
           <img src="./Assets/images/icon-cart.svg" class="hover:brightness-50 " id="Cart-image" alt="">
           <span
@@ -69,7 +51,6 @@
         <div
           class=" hidden absolute h-60 w-[21rem]  bg-white top-[5.5rem] md:right-32 md:h-48 md:w-80 rounded-md p-4 shadow-2xl items-center  "
           id="cart">
-
           <h4 class="p-1 text-sm font-bold text-Black ">Cart</h4>
           <hr class="mt-2 border-black opacity-25">
           <h4 class=" hidden text-xs font-bold text-DarkGrayishBlue mt-16 ml-20" id="empyt-msg">Your cart is empty.</h4>
@@ -84,9 +65,6 @@
                 <h4 class="text-sm text-DarkGrayishBlue ">Fall Limited Edition Sneakers</h4>
                 <span>$125 x <span id="items-count">3</span></span>
                 <span class="text-Black font-bold">$<span id="price">375.00</span></span>
-
-
-
               </div>
               <!-- Delete Image  -->
               <div class="relative top-4 cursor-pointer">
@@ -99,22 +77,13 @@
                 class="flex  h-11  mr-10 w-[100%] mx-auto items-center justify-center rounded-md bg-Orange text-PaleOrange     font-bold shadow-2xl shadow-PaleOrange md:w-[100%] md:h-10 md:mr-0 hover:bg-LightOrange">
                 Checkout</button>
             </div>
-
           </div>
         </div>
-
-
-
       </div>
-
-    </div>
+  </div>
     <!-- Horizontal Line  -->
     <hr class=" hidden  md:block p-3 mt-3 mx-auto ml-[14rem] mr-[13.5rem]">
-
-
-
   </nav>
-
 
   <!-- Hero Section -->
   <section class="mb-14">
@@ -129,7 +98,6 @@
           <img src="./Assets/images/image-product-1.jpg"
             class=" object-cover h-[50vh] w-[100vw]  md:h-[55vh] md:w-[23vw] md:rounded-lg md:object-cover "
             id="main-img" alt="">
-
           <button class=" absolute p-4  bg-white rounded-full mb-10 top-48 left-3 md:hidden" id="prev-image">
             <img src="./Assets/images/icon-previous.svg" class="scale-75" id="prev" alt="">
           </button>
@@ -137,7 +105,6 @@
             <img src="./Assets/images/icon-next.svg" class="scale-75" id="next" alt="">
           </button>
         </div>
-
         <!-- Small Images  -->
         <div class="hidden md:flex flex-row ms-[17rem]  justify-around  md:block">
           <img src="./Assets/images/image-product-1-thumbnail.jpg" id="product-1"
@@ -148,8 +115,6 @@
             class="rounded-md h-16 hover border-Orange hover:border-2 hover:bg-white hover:opacity-50 ">
           <img src="./Assets/images/image-product-4-thumbnail.jpg" id="product-4"
             class="rounded-md h-16  hover border-Orange hover:border-2 hover:bg-white hover:opacity-50">
-
-
         </div>
       </div>
 
@@ -169,9 +134,7 @@
               These low-profile sneakers are your perfect casual wear
               companion. Featuring a
               durable rubber outer sole, they’ll withstand everything the weather can offer.
-
             </p>
-
           </div>
           <!-- Price -->
           <div class=" space-x-5  flex md:space-x-4   ">
@@ -205,32 +168,17 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="hidden attribution md:block text-DarkGrayishBlue">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a class="text-Orange underline-offset-8" href="https://github.com/JejurkarYash">JejurkarYash</a>.
   </div>
+  <!-- JS -->
+  <script src="script.js"></script>
+
 </body>
-<script src="script.js"></script>
 
 </html>
