@@ -75,7 +75,6 @@ function UpdateImage() {
     MainImage.src = images[imageIndex];
 }
 
-
 // Function for adding items in cart
 Minus.addEventListener('click', function () {
 
@@ -86,7 +85,6 @@ Minus.addEventListener('click', function () {
 });
 
 Plus.addEventListener('click', function () {
-
     ItemNumber.textContent++;
 })
 
@@ -94,12 +92,6 @@ Plus.addEventListener('click', function () {
 
 AddToCart.addEventListener('click', function () {
     //  Creating a badge element for displaying the items of cart
-
-
-
-
-
-
     const cartCount = parseInt(ItemNumber.textContent);
     badgeElement.textContent = cartCount;
 
@@ -108,27 +100,16 @@ AddToCart.addEventListener('click', function () {
     console.log(price);
     if (cartCount == 0) {
         badgeElement.classList.add('hidden');
-
-    }
-    else {
-
+    } else {
         badgeElement.classList.remove("hidden");
         ItemCount.textContent = cartCount;
         ItemPrice.textContent = price;
-
-
     }
-
-
-
-
-
 });
 
 // Function for displaying Cart 
 
 CartImage.addEventListener('click', function () {
-
 
     if (Cart.classList.contains('hidden')) {
 
@@ -159,10 +140,21 @@ CartImage.addEventListener('click', function () {
 
 
 // function for Delete Items from cart and display msg 
-
 DeleteIcon.addEventListener('click', function () {
-
     ProductInCart.classList.add('hidden');
     EmptyMsg.classList.remove('hidden');
     badgeElement.classList.add('hidden');
+});
+
+
+// JavaScript to toggle the menu visibility and hide the logo when clicking the menu icon
+const menuIcon = document.getElementById('menuIcon');
+const menu = document.getElementById('menu');
+const logo = document.getElementById('logo');
+const profileCart = document.getElementById('profile-cart');
+
+menuIcon.addEventListener('click', function() {
+    menu.classList.toggle('hidden');
+    logo.classList.toggle('hidden');
+    profileCart.classList.toggle('hidden');
 });
